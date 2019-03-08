@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CTG Plugins - Options</title>
+		<script src="jquery-3.1.1.min.js"></script>
+		<script src="options.js"></script>
+
+		<style>
+			.pageDiv{
+				display: inline-block;
+				padding: 5px;
+				border: 1px solid black;
+				height: 70vh;
+				overflow: auto;
+				width: 800px;
+			}
+			.tabs{
+				border: 1px solid black;
+				border-bottom: 0px;
+				background: #EEEEEE;
+				padding-left: 5px;
+				padding-right: 5px;
+				color: #0000fe;
+				border-radius: 5px 5px 0px 0px;
+				float: left;
+				margin-left: 5px;
+				text-decoration: none;
+			}
+			.selectedTab{
+				background: #FFFFFF;
+				font-weight: bold;
+				color: #000000;
+				cursor: default;
+			}
+			.pluginTitle{
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body style="font-size: 100%;">
+		<div style="width: 800px; margin: auto; text-align: center;">
+			<div id="installReasonInstall" hidden>
+				<strong style="font-size: 25px; color: #0000FF;">Thank you for installing CTG Plugins.<br>If you have any suggestions for more plugins, contact me on my website below.</strong><br><br>
+			</div>
+			<strong style="font-size: 25px; color: #20c300;">CTG Plugins<text id="version"></text> - Options</strong><br>
+			<br>
+			<div style="width: 800px; margin: auto;">
+				<a href="#EnableDisablePlugins" class="tabs">Enable/Disable Plugins</a>
+				<a href="#KeyboardShortcuts" class="tabs">Keyboard Shortcuts</a>
+			</div>
+			<div>
+				<div id="EnableDisablePlugins" class="pageDiv" style="display: none;">
+					<strong style="font-size: 20px;">Enable/Disable Plugins</strong><br>
+					<br>
+					<strong class="pluginTitle">Auto Scroll</strong><br>
+					<text>Scroll a page at a constant speed. Completely hands free! Automatically detects longest scroll area.</text>
+					<div>Enabled: <input type="checkbox" id="autoScrollEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">Focus</strong><br>
+					<text>Select part of a webpage to focus on and everything else will automatically be hidden.</text><br>
+					<div>Enabled: <input type="checkbox" id="focusEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">Pause All Tabs</strong><br>
+					<text>Pauses audio/video from all tabs in one click.</text><br>
+					<div>Enabled: <input type="checkbox" id="pauseAllTabsEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">Reveal Password</strong><br>
+					<text>Right click in a password input box and select the option to reveal/hide the passwords you are typing.</text><br>
+					<div>Enabled: <input type="checkbox" id="revealPasswordEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">YouTube - Extract Captions</strong><br>
+					<text>Extracts the full closed captions from a YouTube video in a human readable format.</text><br>
+					<div>Enabled: <input type="checkbox" id="youtubeExtractCaptionsEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">Password Generator</strong><br>
+					<text>Instantly generates a secure password to use when creating an account.</text><br>
+					<div>Enabled: <input type="checkbox" id="passwordGeneratorEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">Auto Click</strong><br>
+					<text>Automatically click at a constant rate without your mouse present.</text><br>
+					<div>Enabled: <input type="checkbox" id="autoClickEnabled" class="enablePluginCheckbox" checked /></div><br>
+
+					<strong class="pluginTitle">Custom Plugin Creator</strong><br>
+					<text>Create your own specialized plugins to automatically run on specific pages.</text><br>
+					<div style="margin-top: 5px;"><button id="customPluginCreate" style="margin: auto; display: block;">Go to Custom Plugin Creator</button></div><br>
+
+					<br>
+					<div>Hide plugins when unavailable: <input type="checkbox" id="hideUnavailable" checked /></div><br>
+				</div>
+				<div id="KeyboardShortcuts" class="pageDiv" style="display: none;">
+					<strong style="font-size: 20px;">Keyboard Shortcuts</strong><br>
+					<br>
+					<text>Certain plugins can be activated quickly with keyboard shortcuts. Shortcuts can be activated on most but not all webpages (Chrome settings/extension pages for example will not work).<br>
+						You may need to restart your browser after initial setup for shortcuts to work on all tabs.</text><br>
+					<br>
+					<strong class="pluginTitle">Auto Scroll</strong><br>
+					<div style="margin-top: 5px;">Enable Shortcut: <input type="checkbox" id="autoScrollShortcutEnabled" class="enableShortcutCheckbox" /></div>
+					<div style="margin-top: 5px;" id="autoScrollShortcutDisplay" hidden>Shortcut: ALT + <select id="autoScrollShortcut" class="shortcutSelect"></select></div>
+					<br>
+					<strong class="pluginTitle">Pause All Tabs</strong><br>
+					<div style="margin-top: 5px;">Enable Shortcut: <input type="checkbox" id="pauseAllTabsShortcutEnabled" class="enableShortcutCheckbox" /></div>
+					<div style="margin-top: 5px;" id="pauseAllTabsShortcutDisplay" hidden>Shortcut: ALT + <select id="pauseAllTabsShortcut" class="shortcutSelect"></select></div>
+					<br>
+					<em>Note: Shortcuts may cause unintended behavior or conflict with certain webpages.</em>
+				</div>
+			</div>
+			<em id="saveLine" style="color: #0000FF; font-size: 25px;" hidden>Changes Saved</em><br>
+			<br>
+			<em>
+				Created by Jason O'Neill<br>
+				<a href="https://creativetechguy.com" target="_blank">www.creativetechguy.com</a>
+			</em>
+		</div>
+	</body>
+</html>
+

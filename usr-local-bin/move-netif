@@ -1,0 +1,56 @@
+#! /usr/bin/fish
+echo "started"
+set num $argv[ 1 ]
+set if eth$num
+#set target_ns $if
+# only continue once the usb adapter has sent the ip address
+# otherwise router on the adapter won't be on
+#
+#echo $if
+#echo "waiting for ip"
+#while not ip a show $if | grep 192.168.8.100
+    #echo (ip a show $if | grep 192.168.8.100)
+    #sleep 0.1
+#end
+#echo "ip attached. continuing with script"
+#sleep 30
+#while true
+    #sleep 0.1
+#end
+echo 1
+#if not set -q namespace_number
+    #echo hello
+    #set -Ux namespace_number 0
+#end
+echo namespace_number-$namespace_number
+
+set target_ns (math $namespace_number + 1)
+echo 2
+set -Ux namespace_number $target_ns
+echo namespace_number-$namespace_number
+echo 3
+
+sudo bash /usr/local/bin/docker-chrome.sh $target_ns
+echo 4
+#sleep 5
+sudo ip link set $if netns $target_ns
+echo 5
+sudo ip netns exec $target_ns ip link set $if name eth1
+echo 6
+
+#sudo ip netns exec $target_ns ip address add 192.168.8.100/24 dev $if
+
+#sudo ip netns exec $target_ns ip link set $if up
+
+#sudo ip netns exec $target_ns ip route add default via 192.168.8.1 dev $if
+
+sudo ip netns exec $target_ns dhclient eth1
+
+#set port (sudo docker exec mycontainer-$target_ns udevadm info -p /sys/class/net/eth1 | head -n 1 | cut -d"/" -f 7)
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/22x22/apps/google-chrome.png /usr/share/icons/hicolor/22x22/apps/google-chrome.png
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/24x24/apps/google-chrome.png /usr/share/icons/hicolor/24x24/apps/google-chrome.png
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/32x32/apps/google-chrome.png /usr/share/icons/hicolor/32x32/apps/google-chrome.png
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/48x48/apps/google-chrome.png /usr/share/icons/hicolor/48x48/apps/google-chrome.png
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/64x64/apps/google-chrome.png /usr/share/icons/hicolor/64x64/apps/google-chrome.png
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/128x128/apps/google-chrome.png /usr/share/icons/hicolor/128x128/apps/google-chrome.png
+#sudo docker exec mycontainer-$target_ns convert -pointsize 20 -fill black -draw 'text 5, 20 \"$port\"' /usr/share/icons/hicolor/256x256/apps/google-chrome.png /usr/share/icons/hicolor/256x256/apps/google-chrome.png

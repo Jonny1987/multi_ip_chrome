@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<title>CTG Plugins - Custom Plugins</title>
+		<script src="../jquery-3.1.1.min.js"></script>
+		<script src="customPlugins.js"></script>
+		<style>
+			#pluginArea>tbody>tr>th,#pluginArea>tbody>tr>td{
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+		</style>
+	</head>
+	<body style="font-size: 100%; margin: 0px;">
+		<div style="width: 100%; text-align: center;">
+			<strong style="font-size: 25px; color: #20c300;">CTG Plugins - Custom Plugins</strong><br>
+			<br>
+			<text>Create your own specialized plugins to automatically run on specific pages.</text><br>
+			<text>Custom Plugins must be written in plain JavaScript.</text><br>
+			<text>Designate the webpages to run each Custom Plugin with JavaScript's Regular Expressions.</text><br>
+			<text>Plugins are stored locally in your browser but can be shared by exporting/importing.</text><br>
+			<text>Storage Space Remaining: <text id="localStorageRemaining">0</text> Bytes</text><br>
+			<br>
+			<button id="newPlugin">Create New Plugin</button><br>
+			<button id="importPlugin">Import Plugin</button><br>
+			<br>
+			<table style="margin: auto;" id="importPluginArea" hidden>
+				<tr>
+					<td colspan="2">
+						Paste Custom Plugin Import Code Here:
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="text" id="importPluginCode" placeholder="Import Code" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button id="closeImportPluginArea">Cancel</button>
+					</td>
+					<td>
+						<button id="importPluginGo">Import</button>
+					</td>
+				</tr>
+			</table>
+			<table style="margin: auto; border: 1px solid black;" id="newPluginArea" hidden>
+				<tr>
+					<td>
+						Title:
+					</td>
+					<td>
+						<input type="text" id="newPluginTitle" placeholder="Plugin Title" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						URL RegEx:
+					</td>
+					<td>
+						<input type="text" id="newPluginRegEx" placeholder="URL Regex" />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Execution Delay:
+					</td>
+					<td>
+						<input type="number" id="newPluginDelay" placeholder="Delay Milliseconds" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						JavaScript Code:
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<textarea cols="50" rows="10" id="newPluginCode" spellcheck="false"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<text id="storageBytesRequired"></text>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button id="closeNewPluginArea">Cancel</button>
+					</td>
+					<td>
+						<button id="savePlugin">Save</button>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<table style="margin: auto; border: 1px solid black; border-collapse: collapse;" id="pluginArea">
+				<tbody id="pluginAreaBody">
+					<tr>
+						<th colspan="4">
+							Plugins
+						</th>
+					</tr>
+					<tr>
+						<th style="width: 125px">
+							Title
+						</th>
+						<th style="width: 100px">
+							URL RegEx
+						</th>
+						<th style="width: 400px; border-right: none;">
+							Code
+						</th>
+						<th style="width: 50px; border-left: none;"></th>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<button id="deleteAll">Delete All Custom Plugins</button><br>
+			<br>
+			<br>
+			<em>
+				Created by Jason O'Neill<br>
+				<a href="https://creativetechguy.com" target="_blank">www.creativetechguy.com</a>
+			</em>
+			<br>
+			<br>
+			<br>
+			<br>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,3 @@
+SUBSYSTEM=="net", ACTION=="add", DEVPATH!="/devices/virtual/*",TAG+="systemd", ENV{SYSTEMD_WANTS}="addif@$number.service"
+#SUBSYSTEM=="net", ACTION=="remove", DEVPATH!="/devices/virtual/*",TAG+="systemd", RUN+="addif.service"
+#SUBSYSTEM=="net", ACTION=="add", DEVPATH!="/devices/virtual/*",TAG+="systemd", RUN="/bin/bash -c '/usr/local/bin/move-netif &> /home/john/docker-output.log'"

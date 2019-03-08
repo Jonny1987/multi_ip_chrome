@@ -1,0 +1,120 @@
+<!doctype html>
+<html style="max-height: 400px; overflow-y: auto;">
+	<head>
+		<title>CTG Plugins</title>
+		<script src="jquery-3.1.1.min.js"></script>
+		<script src="popup.js"></script>
+	</head>
+	<body style="min-width: 200px; max-height: 400px; overflow-y: auto;">
+		<table style="margin: auto;">
+			<tr>
+				<th colspan="2">
+					<text style="font-size: 20px; color: #20c300;">CTG Plugins</text>
+				</th>
+			</tr>
+			<tr class="updateInfo" hidden>
+				<th colspan="2" style="border-top: 1px solid black; padding-top: 20px; padding-bottom: 20px;">
+					<text style="font-size: 20px; color: #0000FF;">A new update has been installed.</text><br>
+					<div id="updateMessageDiv" hidden>
+						<br>
+						<text style="font-size: 18px; color: #FF0000;" id="updateMessage"></text><br>
+					</div>
+					<br>
+					<text style="font-size: 15px; color: #0000FF;">If you like <text style="font-size: 15px; color: #20c300;">CTG Plugins</text>, a great way to show your support is with a rating <a href="javascript:void(0)" id="ratingLink" style="color: #20c300;">here</a>.</text><br>
+					<br>
+					<button id="updateOk" style="margin-top: 10px;">OK</button><br>
+				</th>
+			</tr>
+			<tr class="plugin autoScroll">
+				<th colspan="2" style="border-top: 1px solid black;">
+					<text style="font-size: 15px;">Auto Scroll</text>
+				</th>
+			</tr>
+			<tr class="plugin autoScroll">
+				<td>
+					Scrolling Speed:
+				</td>
+				<td>
+					<input id="autoScrollSpeed" style="width: 50px;" value="10" />
+				</td>
+			</tr>
+			<tr class="plugin autoScroll">
+				<td colspan="2">
+					<button id="autoScrollStart" style="margin: auto; display: block;">Start</button>
+				</td>
+			</tr>
+			<tr class="plugin focus">
+				<th colspan="2" style="border-top: 1px solid black;">
+					<text style="font-size: 15px;">Focus</text>
+				</th>
+			</tr>
+			<tr class="plugin focus">
+				<td colspan="2">
+					<button id="focusGo" style="margin: auto; display: block;">Select Focus</button>
+				</td>
+			</tr>
+			<tr class="plugin pauseAllTabs">
+				<th colspan="2" style="border-top: 1px solid black;">
+					<text style="font-size: 15px;">Pause All Tabs</text>
+				</th>
+			</tr>
+			<tr class="plugin pauseAllTabs">
+				<td colspan="2">
+					<button id="pauseAllTabsGo" style="margin: auto; display: block;">Pause All</button>
+				</td>
+			</tr>
+			<tr class="plugin youtubeExtractCaptions">
+				<th colspan="2" style="border-top: 1px solid black;">
+					<text style="font-size: 15px;">YouTube - Extract Captions</text>
+				</th>
+			</tr>
+			<tr class="plugin youtubeExtractCaptions">
+				<td colspan="2">
+					<button id="youtubeExtractCaptionsGo" style="margin: auto; display: block;">Extract</button>
+				</td>
+			</tr>
+			<tr class="plugin passwordGenerator">
+				<th colspan="2" style="border-top: 1px solid black;">
+					<text style="font-size: 15px;">Password Generator</text>
+				</th>
+			</tr>
+			<tr class="plugin passwordGenerator">
+				<td colspan="2">
+					<button id="passwordgeneratorGo" style="margin: auto; display: block;">Generate</button>
+				</td>
+			</tr>
+			<tr class="plugin autoClick">
+				<th colspan="2" style="border-top: 1px solid black;">
+					<text style="font-size: 15px;">Auto Click</text>
+				</th>
+			</tr>
+			<tr class="plugin autoClick">
+				<td>
+					Delay between clicks:
+				</td>
+				<td>
+					<input id="autoClickDelay" style="width: 50px;" value="10" placeholder="milliseconds" title="1000 ms = 1 s" />
+				</td>
+			</tr>
+			<tr class="plugin autoClick">
+				<td colspan="2">
+					<button id="autoClickStart" style="margin: auto; display: block;">Select Click Target</button>
+				</td>
+			</tr>
+			<tr>
+				<th colspan="2" style="border-top: 1px solid black; padding-top: 10px;">
+					<a href="javascript:void(0)" id="optionsPage">Options</a>
+				</th>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center; padding-top: 10px;">
+					<em>
+						Created by Jason O'Neill<br>
+						<a href="javascript:void(0)" id="websiteLink">www.creativetechguy.com</a>
+					</em>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
+

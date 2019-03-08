@@ -1,0 +1,5 @@
+[Match]
+MACAddress=0c:5b:8f:27:9a:64
+
+[Link]
+MACAddressPolicy=random

@@ -1,0 +1,39 @@
+{
+   "checksum": "2f82558e5d95338f3766d41fb7d344e3",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13192484233063682",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13192552680798281"
+            },
+            "name": "Check your IP address | MyIP.com",
+            "type": "url",
+            "url": "https://www.myip.com/"
+         } ],
+         "date_added": "13192479720813703",
+         "date_modified": "13192484233063682",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13192479720813714",
+         "date_modified": "0",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13192479720813721",
+         "date_modified": "0",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

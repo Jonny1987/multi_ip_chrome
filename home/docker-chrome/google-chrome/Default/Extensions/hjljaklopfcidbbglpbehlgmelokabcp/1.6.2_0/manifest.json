@@ -1,0 +1,25 @@
+{
+   "author": "Jason O'Neill",
+   "background": {
+      "persistent": true,
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "CTG Plugins"
+   },
+   "description": "A collection of simple plugins to improve your web browsing experience.",
+   "icons": {
+      "128": "assets/icon128.png",
+      "16": "assets/icon16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5zV2/tDB5ZvMNnxEKuMtboGJtGKmLXKs68W+TyEntmAOMtmteqfB/20BgycZhyuixPRfXs7JGiUP3mgDcIboMZLTLmYRbVY0Bt3BbyJT7qfl7FSJkf1OV2lkowClWSzH6Bss21khnV4NZLvBC3xPrrs/ST35sA8i3f1qG+fcrllnaedOdPS9HWdBlT1+T0ZuYqRv+hGTfj0IMkjxligsyk0tp/VIhGymbEaXX91f3ZqLCgVtsilYYRdPqobgL9NyyId5mCEpALLNF6sR1n8UqD/lKaJ4YAsCdX82Fz1eH16k3h9CU3X/AZuJBzoVHN441X7w2iqpEcygWd5hYdUkKQIDAQAB",
+   "manifest_version": 2,
+   "name": "CTG Plugins",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "\u003Call_urls>", "storage", "webRequest", "contextMenus" ],
+   "short_name": "CTG Plugins",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.6.2"
+}

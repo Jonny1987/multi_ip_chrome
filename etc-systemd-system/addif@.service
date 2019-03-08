@@ -1,0 +1,9 @@
+[Unit]
+
+	Description = Move interface to physical namespace
+
+[Service]
+
+	Type            = simple
+	RemainAfterExit = false
+	ExecStart       = /usr/local/bin/move-netif %i
