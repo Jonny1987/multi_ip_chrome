@@ -48,4 +48,6 @@ cp dotfiles-master/.gitconfig ~/.gitconfig
 
 . ~/.bashrc
 
+docker build -t docker-chrome4 docker-chrome/
+
 usermod -aG vboxusers "$USER"
