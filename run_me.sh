@@ -17,7 +17,7 @@ apt-get install -y \
     gnupg-agent \
     software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-add-apt-repository \
+add-apt-repository -y \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
@@ -25,7 +25,7 @@ apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io
 
 # install fish
-apt-add-repository ppa:fish-shell/release-3
+apt-add-repository -y ppa:fish-shell/release-3
 apt-get update
 apt-get install -y fish
 
@@ -48,4 +48,4 @@ cp dotfiles-master/.gitconfig ~/.gitconfig
 
 . ~/.bashrc
 
-sudo usermod -aG vboxusers "$USER"
+usermod -aG vboxusers "$USER"
