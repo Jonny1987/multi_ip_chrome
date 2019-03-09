@@ -16,7 +16,8 @@ apt-get install -y \
     curl \
     gnupg-agent \
     software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -sudo add-apt-repository \
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
@@ -33,15 +34,16 @@ apt-get install -y xdotool wmctrl xterm git vim-gnome
 
 # clone autoclicker
 cd ~
-mkdir autoclicker
-wget https://github.com/Jonny1987/autclicker/archive/master.zip 
-unzip master.zip -d autoclicker
+wget https://github.com/Jonny1987/autclicker/archive/master.zip -O master.zip
+unzip master.zip
 rm master.zip
 
-mkdir dotfiles
-wget https://github.com/Jonny1987/dotfiles/archive/master.zip
-unzip master.zip -d dotfiles
+wget https://github.com/Jonny1987/dotfiles/archive/master.zip -O master.zip
+unzip master.zip
 rm master.zip
 
-dotfiles/run_me.sh
+cp dotfiles-master/.bashrc ~/.bashrc
+cp dotfiles-master/.vimrc ~/.vimrc
+cp dotfiles-master/.gitconfig ~/.gitconfig
+
 . ~/.bashrc
