@@ -47,3 +47,5 @@ cp dotfiles-master/.vimrc ~/.vimrc
 cp dotfiles-master/.gitconfig ~/.gitconfig
 
 . ~/.bashrc
+
+sudo usermod -aG vboxusers "$USER"
