@@ -5,6 +5,8 @@ cp etc-systemd-system/addif@.service /etc/systemd/system/
 cp etc-udev-rules.d/1-physical-netns.rules /etc/udev/rules.d/
 udevadm control --reload && udevadm trigger
 cp -r home/docker-chrome/ ~/
+mkdir ~/autostart
+cp -r home/autostart/* ~/autostart/
 cp -r usr-local-bin/* /usr/local/bin/
 touch /usr/local/bin/webpage
 
