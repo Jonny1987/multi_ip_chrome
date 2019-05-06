@@ -53,12 +53,14 @@ RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
     && mkdir -p /home/chrome/Downloads && chown -R chrome:chrome /home/chrome
 
 RUN apt-get update && apt-get install xdotool -y && apt-get install xinput -y && apt-get install imagemagick -y
+RUN apt-get update && apt-get install curl -y
 
 COPY local.conf /etc/fonts/local.conf
 COPY script.sh /usr/local/bin
 #COPY icons_change.sh /usr/local/bin
 COPY script2.sh /usr/local/bin
 COPY --chown=chrome:chrome google-chrome /home/chrome/.config/google-chrome
+COPY same_ip.html /home/chrome/
 #COPY google-chrome2.png /usr/share/icons/hicolor/22x22/apps/google-chrome.png
 #COPY google-chrome2.png /usr/share/icons/hicolor/24x24/apps/google-chrome.png
 #COPY google-chrome2.png /usr/share/icons/hicolor/32x32/apps/google-chrome.png
