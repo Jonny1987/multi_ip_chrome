@@ -57,21 +57,8 @@ RUN apt-get update && apt-get install curl -y
 
 COPY local.conf /etc/fonts/local.conf
 COPY script.sh /usr/local/bin
-#COPY icons_change.sh /usr/local/bin
 COPY script2.sh /usr/local/bin
 COPY --chown=chrome:chrome google-chrome /home/chrome/.config/google-chrome
 COPY same_ip.html /home/chrome/
-#COPY google-chrome2.png /usr/share/icons/hicolor/22x22/apps/google-chrome.png
-#COPY google-chrome2.png /usr/share/icons/hicolor/24x24/apps/google-chrome.png
-#COPY google-chrome2.png /usr/share/icons/hicolor/32x32/apps/google-chrome.png
-#COPY google-chrome2.png /usr/share/icons/hicolor/48x48/apps/google-chrome.png
-#COPY google-chrome2.png /usr/share/icons/hicolor/64x64/apps/google-chrome.png
-#COPY google-chrome2.png /usr/share/icons/hicolor/128x128/apps/google-chrome.png
-#COPY google-chrome2.png /usr/share/icons/hicolor/256x256/apps/google-chrome.png
-
-#RUN ./usr/local/bin/icons_change.sh
-#RUN sed -e 's/$/ contrib non-free/' -i /etc/apt/sources.list
-#RUN apt-get update && apt-get install nvidia-detect -y && nvidia-detect
-#RUN apt update && DEBIAN_FRONTEND=noninteractiv apt -t buster install -y linux-headers-4.19.0-1-all nvidia-driver-390
 
 ENTRYPOINT [ "script.sh" ]
